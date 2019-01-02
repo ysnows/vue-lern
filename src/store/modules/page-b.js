@@ -25,8 +25,10 @@ const actions = {
     }
 };
 
-export default new Vuex.Store({
+export default {
+    namespaced: true,
     state,
     mutations,
     actions
-})
+
+}

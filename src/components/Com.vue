@@ -1,7 +1,8 @@
 <template>
     <div>
-        <button @click="increment">增加</button>
-        <button @click="decrement">减少</button>
+        {{$store.state.count.count}}
+        <button @click="add(2)">增加</button>
+        <button @click="remove">减少</button>
     </div>
 </template>
 
@@ -13,14 +14,9 @@
         props: [
             'age'
         ],
-        data: function () {
-            return {
-                hello: 'hello'
-            }
-        },
-        methods: mapActions([
-            'increment',
-            'decrement'
+        methods: mapActions('count', [
+            'add',
+            'remove'
         ])
     }
 </script>

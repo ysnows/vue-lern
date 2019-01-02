@@ -9,7 +9,6 @@
 
     export default {
         name: "PageA",
-
         components: {
             Com
         }
